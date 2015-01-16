@@ -1,0 +1,9 @@
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Debug\Data.dll
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Debug\Data.pdb
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Debug\MongoDB.Bson.dll
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Debug\MongoDB.Driver.dll
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Debug\MongoDB.Bson.xml
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Debug\MongoDB.Driver.xml
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\obj\Debug\Data.dll
+c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\obj\Debug\Data.pdb
