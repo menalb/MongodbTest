@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac;
+using Data.Repositories;
 
 namespace CRUDMongo
 {
@@ -17,6 +19,14 @@ namespace CRUDMongo
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            //var builder = new ContainerBuilder();
+            //builder.RegisterType<LibraryRepository>().As<ILibraryRepository>();
+            //builder.Register(c =>
+            //    {
+            //        var config= Con
+            //    })
+
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
