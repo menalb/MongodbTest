@@ -7,3 +7,12 @@ c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\bin\Deb
 c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\obj\Debug\Data.dll
 c:\users\meneghinia\documents\visual studio 2012\Projects\CRUDMongo\Data\obj\Debug\Data.pdb
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\bin\Debug\Data.dll
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\bin\Debug\Data.pdb
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\bin\Debug\MongoDB.Bson.dll
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\bin\Debug\MongoDB.Driver.dll
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\bin\Debug\MongoDB.Bson.xml
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\bin\Debug\MongoDB.Driver.xml
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\obj\Debug\Data.dll
+C:\Users\meneghinia\Source\Repos\MongodbTest\CRUDMongo\Data\obj\Debug\Data.pdb

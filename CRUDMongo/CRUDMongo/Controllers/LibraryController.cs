@@ -11,11 +11,16 @@ namespace CRUDMongo.Controllers
     {
         private readonly ILibraryRepository _repository;
 
-        public LibraryController()
+        //public LibraryController()
+        //{
+        //    _repository = new LibraryRepository(
+        //        ConfigurationManager.ConnectionStrings["MongoServer"].ConnectionString,
+        //        ConfigurationManager.AppSettings["libraryDbName"]);
+        //}
+
+        public LibraryController(ILibraryRepository repository)
         {
-            _repository = new LibraryRepository(
-                ConfigurationManager.ConnectionStrings["MongoServer"].ConnectionString,
-                ConfigurationManager.AppSettings["libraryDbName"]);
+            _repository = repository;
         }
 
         public ActionResult Index()

@@ -1,0 +1,32 @@
+﻿@model CRUDMongoWeb.Models.BookModel
+
+@{
+    ViewBag.Title = "Add book";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.Title)
+                @Html.TextBoxFor(m => m.Title)
+                @Html.ValidationMessageFor(m => m.Title)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Author)
+                @Html.TextBoxFor(m => m.Author)
+                @Html.ValidationMessageFor(m => m.Author)
+            </li>
+        </ol>
+        <input type="submit" value="Save" />
+    </fieldset>
+}

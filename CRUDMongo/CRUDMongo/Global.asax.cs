@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using System.Configuration;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
+using Autofac.Core;
+using Autofac.Integration.Mvc;
 using Data.Repositories;
 
 namespace CRUDMongo
@@ -18,16 +18,27 @@ namespace CRUDMongo
     {
         protected void Application_Start()
         {
+            var builder = new ContainerBuilder();
+
+            builder.RegisterControllers(typeof (MvcApplication).Assembly);
+            //builder.RegisterModule<AutofacWebTypesModule>();
+            //builder.RegisterSource(new ViewRegistrationSource());
+            //builder.RegisterFilterProvider();
+
+            builder.RegisterType<LibraryRepository>()
+                   .As<ILibraryRepository>()
+                   .WithParameters(new List<Parameter>
+                       {
+                           new NamedParameter("connectionString",
+                                              ConfigurationManager.ConnectionStrings["MongoServer"].ConnectionString),
+                           new NamedParameter("dbName",
+                                              ConfigurationManager.AppSettings["libraryDbName"])
+                       });
+
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
             AreaRegistration.RegisterAllAreas();
-
-            //var builder = new ContainerBuilder();
-            //builder.RegisterType<LibraryRepository>().As<ILibraryRepository>();
-            //builder.Register(c =>
-            //    {
-            //        var config= Con
-            //    })
-
-
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

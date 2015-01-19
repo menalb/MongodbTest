@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CRUDMongoWeb.Models.BookModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    @Html.ActionLink("Add", "Insert")
+</div>
+<ul>
+    @foreach (var book in Model)
+    {
+        <li><b>Title: </b>@book.Title <b>Author: </b>@book.Author</li>   
+    }
+</ul>
