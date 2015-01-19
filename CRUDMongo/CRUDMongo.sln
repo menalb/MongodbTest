@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{87BA99C1-5D9B-4772-9619-9ABB35FD23FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDMongoWeb", "WebApplication1\CRUDMongoWeb.csproj", "{9F24BB15-3759-4505-BDCB-16A9C4AB2D09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDMongoWeb", "CRUDMongoWeb\CRUDMongoWeb.csproj", "{9F24BB15-3759-4505-BDCB-16A9C4AB2D09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
