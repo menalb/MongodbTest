@@ -22,9 +22,17 @@
                 @Html.ValidationMessageFor(m => m.Title)
             </li>
             <li>
-                @Html.LabelFor(m => m.Author)
-                @Html.TextBoxFor(m => m.Author)
-                @Html.ValidationMessageFor(m => m.Author)
+                <b>Author</b>
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Author.Name)
+                @Html.TextBoxFor(m => m.Author.Name)
+                @Html.ValidationMessageFor(m => m.Author.Name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Author.Surname)
+                @Html.TextBoxFor(m => m.Author.Surname)
+                @Html.ValidationMessageFor(m => m.Author.Surname)
             </li>
         </ol>
         <input type="submit" value="Save" />

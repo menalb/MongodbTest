@@ -7,6 +7,12 @@ namespace CRUDMongoWeb.Models
         [Required]
         public string Title { get; set; }
         [Required]
-        public string Author { get; set; }
+        public AuthorModel Author { get; set; }
+    }
+
+    public class AuthorModel
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }

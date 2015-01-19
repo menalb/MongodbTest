@@ -11,6 +11,6 @@
 <ul>
     @foreach (var book in Model)
     {
-        <li><b>Title: </b>@book.Title <b>Author: </b>@book.Author</li>   
+        <li><b>Title: </b>@book.Title <b>Author: </b>@book.Author.Name - @book.Author.Surname</li>   
     }
 </ul>

@@ -17,10 +17,14 @@ namespace CRUDMongoWeb.Controllers
 
         public ActionResult Index()
         {
-            var l = _repository.GetLibrary().Select(x=>new BookModel
+            var l = _repository.GetLibrary().Select(x => new BookModel
                 {
                     Title = x.Title,
-                    Author = x.Author
+                    Author = new AuthorModel
+                        {
+                            Name = x.Author.Name,
+                            Surname = x.Author.Surname
+                        }
                 });
             return View(l);
         }
@@ -32,15 +36,19 @@ namespace CRUDMongoWeb.Controllers
         }
 
         [HttpPost]
-        public void Insert(BookModel book)
+        public ActionResult Insert(BookModel book)
         {
             _repository.Create(new Book
                 {
                     Title = book.Title,
-                    Author = book.Author
+                    Author = new Author
+                        {
+                            Name = book.Author.Name,
+                            Surname = book.Author.Surname
+                        }
                 });
 
-            RedirectToAction("Index");
+            return RedirectToAction("Index", "Library");
         }
     }
 }
