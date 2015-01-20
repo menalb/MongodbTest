@@ -48,7 +48,7 @@ namespace CRUDMongoWeb.Controllers
                         }
                 });
 
-            return RedirectToAction("Index", "Library");
+            return RedirectToAction("Index");
         }
     }
 }
