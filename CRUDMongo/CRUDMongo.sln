@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDMongoWeb", "CRUDMongoWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAPerformances", "CAPerformances\CAPerformances.csproj", "{2F334107-5B32-44BD-84BE-E11A861C6970}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMongoRepository", "TestMongoRepository\TestMongoRepository.csproj", "{771E76FE-7449-4822-9B0F-E83B1F819710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{2F334107-5B32-44BD-84BE-E11A861C6970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F334107-5B32-44BD-84BE-E11A861C6970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F334107-5B32-44BD-84BE-E11A861C6970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771E76FE-7449-4822-9B0F-E83B1F819710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771E76FE-7449-4822-9B0F-E83B1F819710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771E76FE-7449-4822-9B0F-E83B1F819710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771E76FE-7449-4822-9B0F-E83B1F819710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
