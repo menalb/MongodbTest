@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
@@ -41,6 +42,16 @@ namespace CAPerformances
             TestDelete();
             Console.WriteLine("Delete total time: {0}", DateTime.Now.Subtract(dt));
 
+            Console.WriteLine("BATCH INSERT");
+            dt = DateTime.Now;
+            TestBatchInsert();
+            Console.WriteLine("Batch Insert total time: {0}", DateTime.Now.Subtract(dt));
+
+            Console.WriteLine("DELETE");
+            dt = DateTime.Now;
+            TestDelete();
+            Console.WriteLine("Delete total time: {0}", DateTime.Now.Subtract(dt));
+
             Console.ReadKey();
         }
 
@@ -61,6 +72,26 @@ namespace CAPerformances
                 };
                 collection.Insert(e);
             }
+        }
+
+        public static void TestBatchInsert()
+        {
+            var l = new List<Entity>();
+            for (var i = 0; i < 1000000; i++)
+            {
+                l.Add(new Entity
+                {
+                    Name = "Name_" + i,
+                    Child = new EntityChild
+                    {
+                        Surname = "Surname_" + i,
+                        Name = "Name_" + i,
+                        Phone = "Phone_" + i,
+                        Address = "Address_" + i
+                    }
+                });
+            }
+            collection.InsertBatch(l);
         }
 
         public static void TestSearch()
